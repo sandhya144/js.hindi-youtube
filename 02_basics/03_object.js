@@ -5,12 +5,13 @@
 
 // object literals 
 // object declaration  --> keys and values
+
 const mySym = Symbol("key1") 
 
 const JsUser = {
-    name: "hitesh",
-    "full name": "Hitesh Chaudhary",
-    [mySym]: "mykey1",
+    name: "Sandhya",
+    "full name": "Sandhya Pandey",
+    [mySym]: "mykey1",   //  correct syntax to decalre symbol 
     age: 18,
     location: "Jaipur",
     email: "hitesh@google.com",
@@ -18,11 +19,27 @@ const JsUser = {
     lastLoginDays: ["monday", "saturday"]
 } 
 
-//  to access an object 
-console.log(JsUser.email)
-console.log(JsUser["email"])   // email treats --> string
-console.log(JsUser["full name"])   // dot  --> can't access
-console.log(JsUser[mySym]) 
+ // to access an object 
+// console.log(JsUser.email)
+// console.log(JsUser["email"])   // email treats --> string
+// console.log(JsUser["full name"])   // dot  --> can't access
+// console.log(JsUser[mySym]) 
+
+JsUser.email = "hitesh@chatgpt.com"
+// Object.freeze(JsUser)
+JsUser.email = "hitesh@microsoft.com"   // freeze allows no changes
+// console.log(JsUser)
 
 
+// const JsUser = {}; // Define JsUser as an object
 
+JsUser.greeting = function (){
+  console.log("hello Js User");
+}
+// console.log(JsUser.greeting);   // function reference
+console.log(JsUser.greeting());  // function executes
+
+JsUser.greetingTwo = function (){  // object ko reference dena hai 
+    console.log(`hello Js User, ${this.name}`);
+  }
+  console.log(JsUser.greetingTwo());
