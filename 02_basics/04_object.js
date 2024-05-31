@@ -75,9 +75,9 @@ navbar(company = "hitesh")
 //     "price": "free",
 // }
 
-[
-    {},
-    {},  // can also be declared through arrays
-    {},
-]
+// [
+//     {},
+//     {},  // can also be declared through arrays
+//     {},
+// ]
 
