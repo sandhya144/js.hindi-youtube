@@ -52,6 +52,32 @@ console.log(Object.entries(tinderUser));   // key-values ----> array me convert 
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'))
 
+// destructure (obejct)
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+ // console.log(course.courseInstructor);
 
+ const {courseInstructor: instructor} = course
+ console.log(instructor);
 
+const navbar = ({company})  => {
+}
+navbar(company = "hitesh")
+
+// API (JSON)
+
+// {
+//     "name": "hitesh",
+//     "coursename": "js in hindi",  // object without any name called json
+//     "price": "free",
+// }
+
+[
+    {},
+    {},  // can also be declared through arrays
+    {},
+]
 
