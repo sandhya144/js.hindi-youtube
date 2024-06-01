@@ -35,11 +35,40 @@ function loginUserMessage(username = "sam"){
   }
     return `${username} just logged in`
 }
-console.log(loginUserMessage("hitesh"))   // overwrite
+// console.log(loginUserMessage("hitesh"))   // overwrite
 // console.log(loginUserMessage())  // undefined
 
+// unknown arguements --> shopping carts
 
+function calculateCartPrice(...num1){   // rest operator
+  return num1
+}
+// console.log(calculateCartPrice(200 , 400 , 500))
 
+function calculateCartPrice(val1, val2, ...num1){   // rest operator
+  return num1
+}
+console.log(calculateCartPrice(200 , 400 , 500 , 2000))  // val1->200   val2->400   
+
+const user = {
+  username:"sandhya",
+  price: 199
+}
+function handleObject(anyObject){
+  console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
+}
+// handleObject(user)
+handleObject({   // another method to pass an object
+  username: "sam",
+  price: 399
+})
+
+const myNewArray = [200,400,100,600]
+function returnSecondValue(getArray){
+  return getArray[1]
+}
+// console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([200, 400, 500, 1000]));
 
 
 
