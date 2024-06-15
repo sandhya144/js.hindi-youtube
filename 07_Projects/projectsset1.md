@@ -5,7 +5,7 @@
 
 # Solution code
 
-## project 1
+## project 1- (color changer)
 
 ``` javacsript
 console.log("Hello")
@@ -16,7 +16,7 @@ buttons.forEach(function (button){
     console.log(button);
     button.addEventListner('click', function (e) {
             console.log(e);
-            console.log(e.target);
+            console.log(e.target);     // from where it get's targeted
             if (e.target.id === 'grey'){
                 body.style.backgroundColor = e.target.id;
             }
