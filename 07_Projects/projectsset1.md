@@ -35,7 +35,7 @@ buttons.forEach(function (button){
 
 ```
 
-# Project 2 Solution
+# Project 2 Solution (BMI Calculator)
 
 const form = document.querySelector('form')
 
@@ -57,7 +57,7 @@ if (height === '' || height < 0 || isNaN(height)) {
     const bmi = (weight / ((height * height)/ 10000)).toFixed(2);
 
     //show the results...
-    
+
     results.innerHTML = `<span>${bmi}</span>`;
 }
 });
