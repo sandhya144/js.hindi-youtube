@@ -62,6 +62,18 @@ if (height === '' || height < 0 || isNaN(height)) {
 }
 });
 
+# Project 3 (Digital Clock)
+
+const clock = document.getElementById('clock');
+// const clock = document.querySelector('#clock')
+
+setInterval(function () {
+    let date = new Date();
+ // console.log(date.toLocaleTimeString());
+   clock.innerHTML = date.toLocaleTimeString();
+}, 1000);    // {for 1sec = 1000 intervals}
+
+# Project 4 (Guess Numbers)
 
 
 
