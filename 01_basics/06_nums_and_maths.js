@@ -36,4 +36,5 @@ console.log(Math.floor(Math.random()*10) + 1);
 const min = 13
 const max = 26
 // console.log((Math.random()*(max - min + 1)) + min )   // max - min + 1 ---> close to 27 
-console.log((Math.random()*(min - max + 1)) + min )
+// console.log((Math.random()*(min - max + 1)) + min )
+console.log((Math.random()*(min - max + 1)))

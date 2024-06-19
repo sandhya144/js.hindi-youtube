@@ -169,15 +169,69 @@ newGameButton.addEventListener('click', function (e){
   playGame = true;
 });
 }
+```
+
+# Project 5 (generate a random color)
+
+```javascript
+
+const randomColor = function (){
+  const hex = '0123456789ABCDEF';
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += hex[(Math.floor(Math.random()* 16))];
+  }
+   return color;
+};
+
+let intervalId   // global Scope
+ const startChangingColor = function () {
+  if(!intervalId) {
+   intervalId = setInterval(changeBgColor, 1000);          // imp......
+  }
+ 
+  function changeBgColor() {
+  document.body.style.backgroundcolor = randomcolor();
+  }
+
+  const stopChangingColor = function () {
+    clearInterval(intervalId);
+    intervalId = null;           // flush out
+  }
+};
+
+document.querySelector('#start').addEventListener('click',startChangingColor);
+
+document.querySelector('#stop').addEventListener('click',stopChangingColor);
+
 
 ```
 
+# project 6 (Keyboard check)
 
+```Javascript
+const insert = document.getElementById('insert')
 
+window.addEventListener('keydown', (e) =>{
+  insert.innerHTML = `
+  <div class='color'>
+  <table>
+  <tr>
+    <th>Key</th>
+    <th>Key</th>
+    <th>Key</th>
+  </tr>
 
+  <tr>
+    <th>${e.key === ' ' ? 'space' : e.key}</th>
+    <th>${e.keyCode}</th>
+    <th>${e.code}</th>
+  </tr>
 
+`;
+});
 
-
+```
 
 
 
