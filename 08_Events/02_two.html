@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="Stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("Sandhya");
+    // }, 2000)
+
+    const saySandy = function(){
+        console.log("sandy")
+    }
+    setTimeout(saySandy, 2000)   // u can give reference too 
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "BEST JS SERIES"
+    }
+    const changeMe = setTimeout(changeText, 2000)
+
+    // clearTimeout(changeMe)  // want to apply on event.....
+    
+  document.querySelector('#stop').addEventListener('click', function (){
+    clearTimeout(changeMe) 
+    console.log("STOPPED")
+  })
+    
+</script>
+</html>
