@@ -22,7 +22,7 @@ createUser.prototype.printMe = function(){
     console.log(`price is ${this.score}`);
 }
 
-const chai = new createUser("chai", 25)    // important......
+const chai = new createUser("chai", 25)                 // important...... ( cannot read properties of undefined )
 const tea = createUser("tea", 250)
 
 chai.printMe()
