@@ -48,7 +48,7 @@ function calculateCartPrice(...num1){   // rest operator
 function calculateCartPrice(val1, val2, ...num1){   // rest operator
   return num1
 }
-console.log(calculateCartPrice(200 , 400 , 500 , 2000))  // val1->200   val2->400   
+console.log(calculateCartPrice(200 , 400 , 500 , 2000))  // val1->200   val2->400  ---->>>  rest print [500, 2000]
 
 const user = {
   username:"sandhya",
@@ -65,7 +65,7 @@ handleObject({   // another method to pass an object
 
 const myNewArray = [200,400,100,600]
 function returnSecondValue(getArray){
-  return getArray[1]
+  return getArray[1]  //pass its arguements.....
 }
 // console.log(returnSecondValue(myNewArray));
 console.log(returnSecondValue([200, 400, 500, 1000]));
